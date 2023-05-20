@@ -1,0 +1,20 @@
+{
+  "BackgroundColor": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.8
+  },
+  "EnableHideUi": false,
+  "HideWhenInTownOrHideout": false,
+  "HideWindowWhenEmpty": false,
+  "Locked": true,
+  "Pos": {
+    "X": 60.0,
+    "Y": 60.0
+  },
+  "Size": {
+    "X": 234.0,
+    "Y": 127.0
+  }
+}

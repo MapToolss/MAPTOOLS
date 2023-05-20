@@ -1,0 +1,79 @@
+{
+  "EnableAutoQuit": false,
+  "AutoQuitCondition": {
+    "conditionSource": "PlayerVitals.HP.Percent <= 30",
+    "component": null
+  },
+  "AutoQuitKey": 122,
+  "Profiles": {
+    "LeagueStartDefaultProfile": {
+      "Rules": [
+        {
+          "Conditions": [
+            {
+              "conditionSource": "PlayerVitals.HP.Percent <= 70 && Flasks.Flask1.IsUsable && !Flasks.Flask1.Active && !Flasks.Flask2.Active",
+              "component": null
+            }
+          ],
+          "delayBetweenRuns": 0.0,
+          "Enabled": true,
+          "Name": "SmallLifeFlask1",
+          "Key": 49
+        },
+        {
+          "Conditions": [
+            {
+              "conditionSource": "PlayerVitals.HP.Percent <= 70 && Flasks.Flask2.IsUsable && !Flasks.Flask1.Active && !Flasks.Flask2.Active",
+              "component": null
+            }
+          ],
+          "delayBetweenRuns": 0.0,
+          "Enabled": true,
+          "Name": "SmallLifeFlask2",
+          "Key": 50
+        },
+        {
+          "Conditions": [
+            {
+              "conditionSource": "PlayerAnimation.Equals(Animation.Run)",
+              "component": {
+                "$type": "AutoHotKeyTrigger.ProfileManager.Component.Wait, AutoHotKeyTrigger",
+                "duration": 1.0
+              }
+            },
+            {
+              "conditionSource": "Flasks.Flask4.IsUsable && !Flasks.Flask4.Active",
+              "component": null
+            }
+          ],
+          "delayBetweenRuns": 0.0,
+          "Enabled": false,
+          "Name": "QuickSilverFlask4",
+          "Key": 52
+        },
+        {
+          "Conditions": [
+            {
+              "conditionSource": "PlayerVitals.MANA.Percent <= 20 && Flasks.Flask5.IsUsable && !Flasks.Flask5.Active",
+              "component": null
+            }
+          ],
+          "delayBetweenRuns": 0.0,
+          "Enabled": true,
+          "Name": "SmallManaFlask5",
+          "Key": 53
+        }
+      ]
+    },
+    "ProfileMidGame": {
+      "Rules": []
+    },
+    "ProfileEndGame": {
+      "Rules": []
+    }
+  },
+  "CurrentProfile": "LeagueStartDefaultProfile",
+  "DebugMode": false,
+  "ShouldRunInHideout": true,
+  "DumpStatusEffectOnMe": 121
+}
